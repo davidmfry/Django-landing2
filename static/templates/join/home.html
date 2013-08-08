@@ -1,8 +1,25 @@
 {% extends 'base.html' %}
+
+{% block jumbotron %}
+    <div class="jumbotron masthead">
+        
+      <div class="container">
+        <h1>MVP Landing</h1>
+        <p>Create your first landing page in Django</p>
+        <p>
+            <a href="#sign_up" class='btn btn-success'>Sign Up</a>
+        </p>
+    
+        </ul>
+      </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-     <h1>WELCOME!</h1>
+     <h1>Join Us</h1>
+        <a name='#sign_up'></a>
         <form action='' method='POST'> {% csrf_token %}
             {{ form.as_p }}
-            <input type='submit' value='join'/>
+            <input class='btn btn-success' type='submit' value='join'/>
         </form>
 {% endblock %}
